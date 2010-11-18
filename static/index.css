@@ -1,0 +1,51 @@
+body {
+    font-family:arial, sans-serif;
+}
+
+#header {
+    border-bottom: 5px solid blue;
+    height: 100%;
+    overflow: hidden;
+    padding: 7px;
+}
+
+#header h1 {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0 0 0 .3em;
+}
+
+#nav {
+    border-bottom: 3px solid blue;
+    height: 100%;
+    overflow: hidden;
+    padding: 7px;
+}
+
+#nav li {
+    font-size: 14px;
+    display: inline;
+    padding: .5em
+}
+
+#nav li a.selected {
+    color: black;
+    text-decoration: none;
+}
+
+#nav ul {
+    list-style: none;
+    float left;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: blue;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: black;
+}
