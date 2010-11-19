@@ -11,7 +11,7 @@ class MainHandler(webapp.RequestHandler):
         if not os.path.isfile(temp):
             temp = os.path.join(
                 os.path.dirname(__file__), 'templates/index.htm')
-        outstr = template.render(temp, {})
+        outstr = template.render(temp, {'path': path})
         self.response.out.write(outstr)
 
 def main():
