@@ -10,32 +10,39 @@
   <link type="text/css" rel="stylesheet" href="/static/index.css"/>
  </head>
  <body>
-  <div id="header">
-   <h1><a href="index.htm">CJ Cubers</a></h1>
-  </div>
-  <div id="nav">
-   <ul>
-    <li><a href="products.htm"
-         {% ifequal path '/products.htm' %}
-          class="selected"
-         {% endifequal %}
-        >Products</a></li>
-    <li><a href="location.htm"
-         {% ifequal path '/location.htm' %}
-          class="selected"
-         {% endifequal %}
-        >Location</a></li>
-    <li><a href="contact.htm"
-         {% ifequal path '/contact.htm' %}
-          class="selected"
-         {% endifequal %}
-        >Contact Us</a></li>
-   </ul>
-  </div>
-  <div id="content">
-   {% block content %}
-     Replace This
-   {% endblock %}
+  <div id="page">
+   <div id="header">
+    <h1><a href="index.htm">CJ Cubers</a></h1>
+    <div id="nav">
+     <ul>
+      <li><a href="index.htm"
+           {% ifequal path '/index.htm' %}
+            class="selected"
+           {% endifequal %}
+          >Home</a></li>
+      <li><a href="products.htm"
+           {% ifequal path '/products.htm' %}
+            class="selected"
+           {% endifequal %}
+          >Products</a></li>
+      <li><a href="location.htm"
+           {% ifequal path '/location.htm' %}
+            class="selected"
+           {% endifequal %}
+          >Location</a></li>
+      <li><a href="contact.htm"
+           {% ifequal path '/contact.htm' %}
+            class="selected"
+           {% endifequal %}
+          >Contact Us</a></li>
+     </ul>
+    </div>
+   </div>
+   <div id="content">
+    {% block content %}
+      Replace This
+    {% endblock %}
+   </div>
   </div>
  </body>
 </html>

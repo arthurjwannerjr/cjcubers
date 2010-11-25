@@ -1,44 +1,53 @@
 body {
-    font-family:arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-#header {
+div#page {
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 550px;
+}
+
+div#header {
     border-bottom: 5px solid blue;
-    height: 100%;
     overflow: hidden;
     padding: 7px;
 }
 
-#header h1 {
+div#header h1 {
+    font-family: "Times New Roman", serif;
     vertical-align: middle;
+    font-size: 32pt;
     margin: 0;
-    padding: 0 0 0 .3em;
-}
-
-#nav {
-    border-bottom: 3px solid blue;
-    height: 100%;
-    overflow: hidden;
-    padding: 7px;
-}
-
-#nav li {
-    font-size: 14px;
     display: inline;
-    padding: .5em
+    padding: 0 0 0 5px;
+}
+
+div#nav {
+    padding: 14px 0 0 0;
+    float: right;
+}
+
+div#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div#nav li {
+    font-size: 16px;
+    display: inline;
+    padding: .5em .7em;
+}
+
+div#nav li:active,
+div#nav li:hover {
+    background-color: gray;
 }
 
 #nav li a.selected {
-    color: black;
+    font-size: 120%;
     text-decoration: none;
-}
-
-#nav ul {
-    list-style: none;
-    float left;
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
 }
 
 a {
@@ -47,5 +56,5 @@ a {
 
 #header h1 a {
     text-decoration: none;
-    color: black;
+    color: blue;
 }
