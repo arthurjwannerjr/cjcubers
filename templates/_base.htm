@@ -11,38 +11,46 @@
  </head>
  <body>
   <div id="page">
-   <div id="header">
-    <h1><a href="index.htm">CJ Cubers</a></h1>
-    <div id="nav">
-     <ul>
-      <li><a href="index.htm"
-           {% ifequal path '/index.htm' %}
-            class="selected"
-           {% endifequal %}
-          >Home</a></li>
-      <li><a href="products.htm"
-           {% ifequal path '/products.htm' %}
-            class="selected"
-           {% endifequal %}
-          >Products</a></li>
-      <li><a href="location.htm"
-           {% ifequal path '/location.htm' %}
-            class="selected"
-           {% endifequal %}
-          >Location</a></li>
-      <li><a href="contact.htm"
-           {% ifequal path '/contact.htm' %}
-            class="selected"
-           {% endifequal %}
-          >Contact Us</a></li>
-     </ul>
-    </div>
-   </div>
-   <div id="content">
-    {% block content %}
-      Replace This
-    {% endblock %}
-   </div>
-  </div>
+   <div id="page_inner">
+    <div id="header">
+     <div id="header_inner">
+      <h1><a href="index.htm">CJ Cubers</a></h1>
+      <div id="nav">
+       <div id="nav_inner">
+        <ul>
+         <li><a href="index.htm"
+              {% ifequal path '/index.htm' %}
+               class="selected"
+              {% endifequal %}
+             >Home</a></li>
+         <li><a href="location.htm"
+              {% ifequal path '/location.htm' %}
+               class="selected"
+              {% endifequal %}
+             >Location</a></li>
+         <li><a href="contact.htm"
+              {% ifequal path '/contact.htm' %}
+               class="selected"
+              {% endifequal %}
+             >Contact Us</a></li>
+        </ul>
+       </div> <!--end div id="nav_inner"-->
+      </div> <!--end div id="nav"-->
+     </div> <!--end div id="header_inner"-->
+    </div> <!--end div id="header"-->
+    <div id="content">
+     <div id="content_inner">
+     {% block content %}
+       Replace This
+     {% endblock %}
+     </div> <!--end div id="content_inner"-->
+    </div> <!--end div id="content"-->
+    <div id="footer">
+     <div id="footer_inner">
+      <p>&copy 2010 CJ Cubers Inc.</p>
+     </div> <!--end div id="footer_inner"-->
+    </div> <!--end div id="footer"-->
+   </div> <!--end div id="page_inner"-->
+  </div> <!--end div id="page"-->
  </body>
 </html>
