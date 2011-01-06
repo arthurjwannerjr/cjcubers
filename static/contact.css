@@ -1,0 +1,24 @@
+div.formsection {
+ float: left;
+ width: 100%;
+ border-bottom: 1px solid #AAA;
+ padding-bottom: .4em;
+}
+
+ul.errors li {
+ color: red;
+}
+
+label {
+ display: block;
+ clear: both;
+ font-size: 85%;
+ font-weight: bold;
+ margin: .5em 0 0;
+ padding-bottom: .5em;
+}
+
+input[type="submit"] {
+ margin: .5em 0;
+ padding: .4em;
+}

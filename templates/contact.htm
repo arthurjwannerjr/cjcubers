@@ -2,6 +2,38 @@
 {% block title %}
  CJ Cubers - Contact Information
 {% endblock %}
+{% block _stylesheet %}
+ <link type="text/css" rel="stylesheet" href="/static/contact.css"/>
+{% endblock %}
 {% block content %}
-   <p>Contact Information</p>
+<h3>{% if greeting %}{{greeting}}{%else%}Please send us a message!{%endif%}</h3>
+<div class="email_form">
+ <form action="contact.htm" method="post">
+  <div class="formsection">
+   {% if error %}
+   <ul class="errors">
+    <li>{{error}}</li>
+   </ul>
+   {% endif %}
+  </div>
+  <div class="formsection">
+   <label for="name">Name</label>
+   <input type="text" id="name" name="name" tabindex="1"
+    size="36" maxlength="36" {% if name %} value="{{name}}" {% endif %}/>
+  </div>
+  <div class="formsection">
+   <label for="email">Email Address</label>
+   <input type="text" id="email" name="email" tabindex="2"
+    size="36" maxlength="36" {% if email %}value="{{email}}" {% endif %}/>
+  </div>
+  <div class="formsection">
+   <label for="message">Message</label>
+   <textarea id="message" name="message" tabindex="3" maxlength="500"
+    rows="4" cols="30">{% if message %}{{message}}{% endif %}</textarea>
+  </div>
+  <div>
+   <input type="submit" value="Send Message" tabindex="4"/>
+  </div>
+ </form>
+</div>
 {% endblock %}

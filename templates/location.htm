@@ -2,6 +2,33 @@
 {% block title %}
  CJ Cubers - Location
 {% endblock %}
+{% block _script %}
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var latlng = new google.maps.LatLng(46.74512, -119.17819);
+    var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+    var marker = new google.maps.Marker({
+      position: latlng, 
+      map: map, 
+      title:"CJ Cubers"
+    }); 
+  }
+</script>
+{% endblock %}
+{% block _onload %}
+ onload="initialize()"
+{% endblock %}
 {% block content %}
-   <p>Location</p>
+ <p>We are located in beautiful Othello, Washington! Come visit us today!</p>
+ <div id="map_canvas"></div> 
 {% endblock %}

@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
  <head>
   <title>
    {% block title %}
@@ -8,8 +7,15 @@
    {% endblock %}
   </title>
   <link type="text/css" rel="stylesheet" href="/static/index.css"/>
+  {% block _stylesheet %}
+  {% endblock %}
+  {% block _script %}
+  {% endblock %}
  </head>
- <body>
+ <body
+  {% block _onload %}
+  {% endblock %}
+  >
   <div id="page">
    <div id="page_inner">
     <div id="header">
@@ -47,7 +53,7 @@
     </div> <!--end div id="content"-->
     <div id="footer">
      <div id="footer_inner">
-      <p>&copy 2010 CJ Cubers Inc.</p>
+      <p>&copy 2010 CJ Cubers Inc. - 2112 W. Yeisley Rd, Othello WA, 99344 - (509) 488-9437</p>
      </div> <!--end div id="footer_inner"-->
     </div> <!--end div id="footer"-->
    </div> <!--end div id="page_inner"-->
